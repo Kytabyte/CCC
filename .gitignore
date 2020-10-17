@@ -1,0 +1,16 @@
+*.txt
+*.pdf
+
+*/*.txt
+*/**/*.txt
+*/*.pdf
+*/**/*.pdf
+
+.vscode
+
+data/*
+
+*/data
+*/test_data
+*/**/data
+*/**/test_data
