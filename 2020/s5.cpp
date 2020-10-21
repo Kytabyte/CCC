@@ -4,6 +4,9 @@ using namespace std;
 
 /**
  * Marks: 9/15
+ * 
+ * O(N^2) is not optimized enough to get full marks
+ * To get full marks I guess this could be solved with a closed form of math equation
  */
 
 int main() {
