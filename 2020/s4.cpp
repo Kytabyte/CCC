@@ -2,6 +2,10 @@
 
 using namespace std;
 
+/**
+ * Marks: 15/15
+ */
+
 int N;
 string S;
 char seats[3] = {'A', 'B', 'C'};

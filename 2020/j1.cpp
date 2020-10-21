@@ -2,6 +2,10 @@
 
 using namespace std;
 
+/**
+ * Marks: 15/15
+ */
+
 int main() {
   int s, m, l;
   cin >> s >> m >> l;

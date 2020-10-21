@@ -6,6 +6,10 @@
 */*.pdf
 */**/*.pdf
 
+*.out
+*/*.out
+*/**/*.out
+
 .vscode
 
 data/*

@@ -2,7 +2,9 @@
 
 using namespace std;
 
-// const int M = 500001;
+/**
+ * Marks: 9/15
+ */
 
 int main() {
   int N;
@@ -15,7 +17,6 @@ int main() {
   for (int i = 0; i < N; i++) {
     cin >> B[i];
     last[B[i]] = i;
-    // count[B[i]]++;
   }
 
   int n = B.size(), coach = B[0], josh = B.back();
@@ -41,7 +42,6 @@ int main() {
     for (auto& p : probs) {
       ans += p.second * count[p.first] / n;
     }
-
 
     cout << fixed << setprecision(9) << ans << endl;
   }

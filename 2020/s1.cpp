@@ -2,6 +2,10 @@
 
 using namespace std;
 
+/**
+ * Marks: 15/15
+ */
+
 void solve() {
   int n;
   cin >> n;
@@ -23,7 +27,7 @@ void solve() {
     x = p.second;
   }
 
-  cout << ans << endl;
+  cout << fixed << setprecision(9) << ans << endl;
 }
 
 int main() {

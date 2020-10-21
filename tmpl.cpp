@@ -2,6 +2,8 @@
 
 using namespace std;
 
+/** START OF TEMPLATE */
+
 #define DEBUG(...) cerr << " [" << #__VA_ARGS__  << ": " << (__VA_ARGS__) << "] "
 template<typename T, typename U> ostream& operator<<(ostream& s, pair<T, U> p) {
   return s << " (" << p.first << "," << p.second << ") ";
@@ -24,6 +26,13 @@ template<typename T> ostream& operator<<(ostream& s, vector<vector<T>> m) {
   }
   return s;
 }
+
+typedef long long ll;
+typedef pair<int, int> pii;
+
+/** END OF TEMPLATE */
+
+/** CODE STARTS HERE */
 
 int main() {
   return 0;

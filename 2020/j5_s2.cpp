@@ -1,15 +1,19 @@
 # include <bits/stdc++.h>
 
+/**
+ * Marks: 15/15
+ */
+
 using namespace std;
 
 vector<vector<int>> grid;
 vector<vector<bool>> visited;
-map<int, vector<int>> factors;
+unordered_map<int, vector<int>> factors;
 int m, n;
 
 void find_factor(int num) {
   for (int f = 1; f * f <= num; f++) {
-    if (num % f == 0) {
+    if (num % f == 0 && f <= max(m, n) && num / f <= max(m, n)) {
       factors[num].push_back(f);
     }
   }
@@ -31,16 +35,14 @@ bool dfs(int r, int c) {
       if (dfs(nr, nc)) {
         return true;
       }
-      visited[nr][nc] = false;
     }
-    nr = num / f - 1;
-    nc = f - 1;
+    
+    swap(nr, nc);
     if (nr < m && nc < n && !visited[nr][nc]) {
       visited[nr][nc] = true;
       if (dfs(nr, nc)) {
         return true;
       }
-      visited[nr][nc] = false;
     }
   }
   return false;
@@ -49,7 +51,7 @@ bool dfs(int r, int c) {
 void solve() {
   cin >> m >> n;
   grid = vector<vector<int>>(m, vector<int>(n, 0));
-  visited = vector<vector<bool>>(n, vector<bool>(n, 0));
+  visited = vector<vector<bool>>(m, vector<bool>(n, 0));
   for (int i = 0; i < m; i++) {
     for (int j = 0; j < n; j++) {
       cin >> grid[i][j];
@@ -65,4 +67,3 @@ int main() {
   solve();
   return 0;
 }
-
