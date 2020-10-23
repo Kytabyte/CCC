@@ -15,7 +15,6 @@ int main() {
     total += n;
     d++;
   }
-  if (p == 1100000) cout << 0 << endl;
-  else cout << d << endl;
+  cout << d << endl;
   return 0;
 }
