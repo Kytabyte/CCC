@@ -27,7 +27,10 @@ bool dfs(int r, int c) {
   int num = grid[r][c];
   if (!factors.count(num)) {
     find_factor(num);
+  } else {
+    return false;
   }
+  // random_shuffle(factors[num].begin(), factors[num].end());
   for (int f : factors[num]) {
     int nr = f - 1, nc = num / f - 1;
     if (nr < m && nc < n && !visited[nr][nc]) {
