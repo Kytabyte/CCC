@@ -1,6 +1,7 @@
 import argparse
 import collections
 import itertools
+import json
 import os
 import subprocess as sp
 import sys
@@ -38,12 +39,25 @@ class _TestEntry:
     def __init__(self, setid, caseid):
         self.setid = setid
         self.caseid = caseid
+        self.fin = self.fout = self.rtype = self.time = self.memory = None
     
     def __lt__(self, other):
         if self.setid != other.setid:
             return self.setid < other.setid
         
         return self.caseid < other.caseid
+    
+    def __repr__(self):
+        rep = {
+            'setid': self.setid,
+            'caseid': self.caseid,
+            'fin': self.fin,
+            'fout': self.fout,
+            'rtype': self.rtype,
+            'time': self.time, 
+            'memory': self.memory
+        }
+        return json.dumps(rep, separators=(',', ':'), indent=2)
 
 
 def find_test_cases(folder):
@@ -61,7 +75,10 @@ def find_test_cases(folder):
             continue
             
         if f in entry_dict:
-            entry_dict[f].fout = os.path.join(folder, name)
+            if not entry_dict[f].fout:
+                entry_dict[f].fout = os.path.join(folder, name)
+            else:
+                entry_dict[f].fin = os.path.join(folder, name)
         else:
             i = f.find('.')
             f = f[i+1:]
