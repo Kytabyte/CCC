@@ -117,7 +117,7 @@ def compile(src):
 
 
 def run(case_group, lang, limit):
-    total = ok = 0
+    total = passed = 0
 
     cmd = RUN_CMD[lang]
     for group in case_group:
@@ -126,7 +126,7 @@ def run(case_group, lang, limit):
         success = True
 
         for case in group['cases']:
-            if not success:
+            if args.early_stop and not success:
                 print(f'Case #{case.caseid:02d}: -- | Runtime: --, Memory: --')
                 continue
 
@@ -159,11 +159,11 @@ def run(case_group, lang, limit):
             elif stats['memory'] > MEMORY_LIMIT:
                 case.rtype = TEST_RESULT_TYPE['memory_limit_exceed']
             else:
-                success = test(case)
-                case.rtype = TEST_RESULT_TYPE['pass'] if success else TEST_RESULT_TYPE['wrong_answer']
+                ok = test(case)
+                case.rtype = TEST_RESULT_TYPE['pass'] if ok else TEST_RESULT_TYPE['wrong_answer']
             
-            if case.rtype != TEST_RESULT_TYPE['pass']:
-                success = False
+            ok = case.rtype == TEST_RESULT_TYPE['pass']
+            success &= ok
             
             if case.rtype == TEST_RESULT_TYPE['time_limit_exceed']:
                 time = f'{limit:.2f}+'
@@ -178,8 +178,8 @@ def run(case_group, lang, limit):
         if setid != 'sample':
             total += 1
             if success:
-                ok += 1
-    print(f'Total {ok}/{total} test sets passed.')
+                passed += 1
+    print(f'Total {passed}/{total} test sets passed.')
             
 
 def test(case):
