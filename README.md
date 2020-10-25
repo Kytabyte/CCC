@@ -166,6 +166,6 @@ Here listed the grade judged by myself and DMOJ. Since I don't have a CCC online
 | S4        | Swapping Seats                | 15/15    | 15/15 |       |
 | S5        | Josh’s Double Bacon Deluxe    |  9/15    |  9/15 | TBO   |
 
-**Note**
+**Note:**  
 TBS: To be solved  
 TBO: To be optimized
