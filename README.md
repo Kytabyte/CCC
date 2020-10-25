@@ -167,5 +167,5 @@ Here listed the grade judged by myself and DMOJ. Since I don't have a CCC online
 | S5        | Josh’s Double Bacon Deluxe    |  9/15    |  9/15 | TBO   |
 
 **Note**
-TBS: To be solved
+TBS: To be solved  
 TBO: To be optimized
