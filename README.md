@@ -110,6 +110,20 @@ As the instructions in `example.cpp` to obtain the time limit you should set on 
 
 Here listed the grade judged by myself and DMOJ. Since I don't have a CCC online grader account, I am not able to test on that platform. However, it will be much appreciated to help me test my code on CCC online grader platform.
 
+### 2017
+
+| Problem # | Title                     | My Judge | DMOJ  | Notes |
+| --------- | ------------------------- | -------- | ----- | ----- |
+| J1        | Quadrant Selection        | 15/15    | 15/15 |       |
+| J2        | Shifty Sum                | 15/15    | 15/15 |       |
+| J3        | Exactly Electrical        | 15/15    | 15/15 |       |
+| J4        | Favourite Times           | 15/15    | 15/15 |       |
+| J5/S3     | Nailed It!                | 15/15    | 15/15 |       |
+| S1        | Sum Game                  | 15/15    | 15/15 |       |
+| S2        | High Tide, Low Tide       | 15/15    | 15/15 |       |
+| S4        | Minimum Cost Flow         | 15/15    | 17/17 |       |
+| S5        | RMT                       | -/15     |  -/15 | TBS   |
+
 ### 2018
 
 | Problem # | Title                     | My Judge | DMOJ  | Notes |
@@ -121,7 +135,7 @@ Here listed the grade judged by myself and DMOJ. Since I don't have a CCC online
 | J5        | Choose your own path      | 15/15    | 15/15 |       |
 | S1        | Voronoi Villages          | 15/15    | 15/15 |       |
 | S3        | RoboThieves               | 15/15    | 15/15 |       |
-| S4        | Balanced Trees            |  5/15    |  5/15 |  To be optimized     |
+| S4        | Balanced Trees            |  5/15    |  5/15 |  TBO  |
 | S5        | Maximum Strategic Savings | 15/15    | 15/15 |       |
 
 ### 2019
@@ -135,7 +149,7 @@ Here listed the grade judged by myself and DMOJ. Since I don't have a CCC online
 | J5        | Rule of Three                 | 15/15    | 15/30 | Fail on DMOJ's additional data |
 | S2        | Pretty Average Primes         | 15/15    | 15/15 |       |
 | S3        | Arithmetic Square             | 15/15    | 16/16 |       |
-| S4        | Tourism                       |  -/15    |  -/15 | Not solved      |
+| S4        | Tourism                       |  -/15    |  -/15 | TBS   |
 | S5        | Triangle: The Data Structure  | 15/15    |  4/15 | DMOJ has strict time limit      |
 
 ### 2020
@@ -150,4 +164,8 @@ Here listed the grade judged by myself and DMOJ. Since I don't have a CCC online
 | S1        | Surmising a Sprinter’s Speed  | 15/15    | 15/15 |       |
 | S3        | Searching for Strings         | 15/15    | 15/15 |       |
 | S4        | Swapping Seats                | 15/15    | 15/15 |       |
-| S5        | Josh’s Double Bacon Deluxe    |  9/15    |  9/15 | Not optimized |
+| S5        | Josh’s Double Bacon Deluxe    |  9/15    |  9/15 | TBO   |
+
+**Note**
+TBS: To be solved
+TBO: To be optimized
