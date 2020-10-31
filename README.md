@@ -110,6 +110,20 @@ As the instructions in `example.cpp` to obtain the time limit you should set on 
 
 Here listed the grade judged by myself and DMOJ. Since I don't have a CCC online grader account, I am not able to test on that platform. However, it will be much appreciated to help me test my code on CCC online grader platform.
 
+### 2016
+
+| Problem # | Title                     | My Judge | DMOJ  | Notes |
+| --------- | ------------------------- | -------- | ----- | ----- |
+| J1        | Tournament Selection      | 15/15    | 15/15 |       |
+| J2        | Magic Squares             | 15/15    | 15/15 |       |
+| J3        | Hidden Palindrome         | 15/15    | 15/15 | An adv O(N) solution TBO      |
+| J4        | Arrival Time              | 15/15    | 15/15 |       |
+| J5/S2     | Tandem Bicycle            | 15/15    | 15/15 |       |
+| S1        | Ragaman                   | 15/15    | 15/15 |       |
+| S3        | Phonomenal Reviews        | 15/15    | 15/15 |       |
+| S4        | Combining Riceballs       | 15/15    | 15/15 |       |
+| S5        | Circle of Life            | 15/15    | 15/15 |       |
+
 ### 2017
 
 | Problem # | Title                     | My Judge | DMOJ  | Notes |
@@ -169,3 +183,12 @@ Here listed the grade judged by myself and DMOJ. Since I don't have a CCC online
 **Note:**  
 TBS: To be solved  
 TBO: To be optimized
+
+## Competitive Programming Resources
+
+### YouTube Channel
+
+Some CP YouTuber whose video I am drowning in watching. Good skills will be learnt from their vids.
+
+- [William Lin](https://www.youtube.com/channel/UCKuDLsO0Wwef53qdHPjbU2Q)
+- [Errichto](https://www.youtube.com/channel/UCBr_Fu6q9iHYQCh13jmpbrg)

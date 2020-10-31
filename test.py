@@ -3,6 +3,7 @@ import collections
 import itertools
 import json
 import os
+import re
 import subprocess as sp
 import sys
 
@@ -93,6 +94,12 @@ def find_test_cases(folder):
                 setid, caseid = 'sample', f[6:]
                 if not caseid:
                     caseid = 1
+            elif f.startswith('samp'):
+                setid, caseid = 'sample', f[4:]
+                if not caseid:
+                    caseid = 1
+            elif re.match(r'(\d+)([a-z])', f):
+                setid, caseid = f[:-1], ord(f[-1]) - ord('a') + 1
             else:
                 setid, caseid = f, 1
             
