@@ -110,75 +110,90 @@ As the instructions in `example.cpp` to obtain the time limit you should set on 
 
 Here listed the grade judged by myself and DMOJ. Since I don't have a CCC online grader account, I am not able to test on that platform. However, it will be much appreciated to help me test my code on CCC online grader platform.
 
+### 2015
+
+| Problem # | Title                     | My Judge | DMOJ  | My Judge (Python) | DMOJ (Python) | Notes |
+| --------- | ------------------------- | -------- | ----- | ----------------- | ------------- | ----- |
+| J1        | Special Day               | 15/15    | 15/15 |                   |               |       |
+| J2        | Happy or Sad              | 15/15    | 15/15 |                   |               |       |
+| J3        | Rovarspraket              | 15/15    | 15/15 |                   |               |       |
+| J4        | Wait Time                 | 15/15    | 15/15 |                   |               |       |
+| J5        | π-day                     | 15/15    | 15/15 |                   |               |       |
+| S1        | Zero That Out             | 15/15    | 15/15 |                   |               |       |
+| S2        | Jerseys                   | 15/15    | 15/15 |                   |               |       |
+| S3        | Gates                     | 15/15    | 30/30 |                   |               |       |
+| S4        | Convex Hull               | 15/15    | 15/15 |                   |               |       |
+| S5        | Greedy For Pies           | 15/15    | 15/15 |                   |               |       |
+
 ### 2016
 
-| Problem # | Title                     | My Judge | DMOJ  | Notes |
-| --------- | ------------------------- | -------- | ----- | ----- |
-| J1        | Tournament Selection      | 15/15    | 15/15 |       |
-| J2        | Magic Squares             | 15/15    | 15/15 |       |
-| J3        | Hidden Palindrome         | 15/15    | 15/15 | An adv O(N) solution TBO      |
-| J4        | Arrival Time              | 15/15    | 15/15 |       |
-| J5/S2     | Tandem Bicycle            | 15/15    | 15/15 |       |
-| S1        | Ragaman                   | 15/15    | 15/15 |       |
-| S3        | Phonomenal Reviews        | 15/15    | 15/15 |       |
-| S4        | Combining Riceballs       | 15/15    | 15/15 |       |
-| S5        | Circle of Life            | 15/15    | 15/15 |       |
+| Problem # | Title                     | My Judge | DMOJ  | My Judge (Python) | DMOJ (Python) | Notes |
+| --------- | ------------------------- | -------- | ----- | ----------------- | ------------- | ----- |
+| J1        | Tournament Selection      | 15/15    | 15/15 |                   |               |       |
+| J2        | Magic Squares             | 15/15    | 15/15 |                   |               |       |
+| J3        | Hidden Palindrome         | 15/15    | 15/15 |                   |               | An adv O(N) solution TBO      |
+| J4        | Arrival Time              | 15/15    | 15/15 |                   |               |       |
+| J5/S2     | Tandem Bicycle            | 15/15    | 15/15 |                   |               |       |
+| S1        | Ragaman                   | 15/15    | 15/15 |                   |               |       |
+| S3        | Phonomenal Reviews        | 15/15    | 15/15 |                   |               |       |
+| S4        | Combining Riceballs       | 15/15    | 15/15 |                   |               |       |
+| S5        | Circle of Life            | 15/15    | 15/15 |                   |               |       |
 
 ### 2017
 
-| Problem # | Title                     | My Judge | DMOJ  | Notes |
-| --------- | ------------------------- | -------- | ----- | ----- |
-| J1        | Quadrant Selection        | 15/15    | 15/15 |       |
-| J2        | Shifty Sum                | 15/15    | 15/15 |       |
-| J3        | Exactly Electrical        | 15/15    | 15/15 |       |
-| J4        | Favourite Times           | 15/15    | 15/15 |       |
-| J5/S3     | Nailed It!                | 15/15    | 15/15 |       |
-| S1        | Sum Game                  | 15/15    | 15/15 |       |
-| S2        | High Tide, Low Tide       | 15/15    | 15/15 |       |
-| S4        | Minimum Cost Flow         | 15/15    | 17/17 |       |
-| S5        | RMT                       | -/15     |  -/15 | TBS   |
+| Problem # | Title                     | My Judge | DMOJ  | My Judge (Python) | DMOJ (Python) | Notes |
+| --------- | ------------------------- | -------- | ----- | ----------------- | ------------- | ----- |
+| J1        | Quadrant Selection        | 15/15    | 15/15 |                   |               |       |
+| J2        | Shifty Sum                | 15/15    | 15/15 |                   |               |       |
+| J3        | Exactly Electrical        | 15/15    | 15/15 |                   |               |       |
+| J4        | Favourite Times           | 15/15    | 15/15 |                   |               |       |
+| J5/S3     | Nailed It!                | 15/15    | 15/15 |                   |               |       |
+| S1        | Sum Game                  | 15/15    | 15/15 |                   |               |       |
+| S2        | High Tide, Low Tide       | 15/15    | 15/15 |                   |               |       |
+| S4        | Minimum Cost Flow         | 15/15    | 17/17 |                   |               |       |
+| S5        | RMT                       | -/15     |  -/15 |                   |               | TBS   |
 
 ### 2018
 
-| Problem # | Title                     | My Judge | DMOJ  | Notes |
-| --------- | ------------------------- | -------- | ----- | ----- |
-| J1        | Telemarketer or not?      | 15/15    | 15/15 |       |
-| J2        | Occupy parking            | 15/15    | 15/15 |       |
-| J3        | Are we there yet?         | 15/15    | 15/15 |       |
-| J4/S2     | Sunflowers                | 15/15    | 15/15 |       |
-| J5        | Choose your own path      | 15/15    | 15/15 |       |
-| S1        | Voronoi Villages          | 15/15    | 15/15 |       |
-| S3        | RoboThieves               | 15/15    | 15/15 |       |
-| S4        | Balanced Trees            |  5/15    |  5/15 |  TBO  |
-| S5        | Maximum Strategic Savings | 15/15    | 15/15 |       |
+| Problem # | Title                     | My Judge | DMOJ  | My Judge (Python) | DMOJ (Python) | Notes |
+| --------- | ------------------------- | -------- | ----- | ----------------- | ------------- | ----- |
+| J1        | Telemarketer or not?      | 15/15    | 15/15 |                   |               |       |
+| J2        | Occupy parking            | 15/15    | 15/15 |                   |               |       |
+| J3        | Are we there yet?         | 15/15    | 15/15 |                   |               |       |
+| J4/S2     | Sunflowers                | 15/15    | 15/15 |                   |               |       |
+| J5        | Choose your own path      | 15/15    | 15/15 |                   |               |       |
+| S1        | Voronoi Villages          | 15/15    | 15/15 |                   |               |       |
+| S3        | RoboThieves               | 15/15    | 15/15 |                   |               |       |
+| S4        | Balanced Trees            |  5/15    |  5/15 |                   |               |  TBO  |
+| S5        | Maximum Strategic Savings | 15/15    | 15/15 |                   |               |       |
 
 ### 2019
 
-| Problem # | Title                         | My Judge | DMOJ  | Notes |
-| --------- | ----------------------------- | -------- | ----- | ----- |
-| J1        | Winning Score                 | 15/15    | 15/15 |       |
-| J2        | Time to Decompress            | 15/15    | 15/15 |       |
-| J3        | Cold Compress                 | 15/15    | 15/15 |       |
-| J4/S1     | Flipper                       | 15/15    | 15/15 |       |
-| J5        | Rule of Three                 | 15/15    | 15/30 | Fail on DMOJ's additional data |
-| S2        | Pretty Average Primes         | 15/15    | 15/15 |       |
-| S3        | Arithmetic Square             | 15/15    | 16/16 |       |
-| S4        | Tourism                       |  -/15    |  -/15 | TBS   |
-| S5        | Triangle: The Data Structure  | 15/15    |  4/15 | DMOJ has strict time limit      |
+| Problem # | Title                         | My Judge | DMOJ  | My Judge (Python) | DMOJ (Python) | Notes |
+| --------- | ----------------------------- | -------- | ----- | ----------------- | ------------- | ----- |
+| J1        | Winning Score                 | 15/15    | 15/15 |                   |               |       |
+| J2        | Time to Decompress            | 15/15    | 15/15 |                   |               |       |
+| J3        | Cold Compress                 | 15/15    | 15/15 |                   |               |       |
+| J4/S1     | Flipper                       | 15/15    | 15/15 |                   |               |       |
+| J5        | Rule of Three                 | 15/15    | 15/30 |                   |               | Fail on DMOJ's additional data |
+| S2        | Pretty Average Primes         | 15/15    | 15/15 |                   |               |       |
+| S3        | Arithmetic Square             | 15/15    | 16/16 |                   |               |       |
+| S4        | Tourism                       |  -/15    |  -/15 |                   |               | TBS   |
+| S5        | Triangle: The Data Structure  | 15/15    |  4/15 |                   |               | DMOJ has strict time limit      |
 
 ### 2020
 
-| Problem # | Title                         | My Judge | DMOJ  | Notes |
-| --------- | ----------------------------- | -------- | ----- | ----- |
-| J1        | Dog Treats                    | 15/15    | 15/15 |       |
-| J2        | Epidemiology                  | 15/15    | 15/15 |       |
-| J3        | Art                           | 15/15    | 15/15 |       |
-| J4        | Cyclic Shifts                 | 15/15    | 15/15 |       |
-| J5/S2     | Escape Room                   | 15/15    | 15/15 |       |
-| S1        | Surmising a Sprinter’s Speed  | 15/15    | 15/15 |       |
-| S3        | Searching for Strings         | 15/15    | 15/15 |       |
-| S4        | Swapping Seats                | 15/15    | 15/15 |       |
-| S5        | Josh’s Double Bacon Deluxe    |  9/15    |  9/15 | TBO   |
+| Problem # | Title                         | My Judge | DMOJ  | My Judge (Python) | DMOJ (Python) | Notes |
+| --------- | ----------------------------- | -------- | ----- | ----------------- | ------------- | ----- |
+| J1        | Dog Treats                    | 15/15    | 15/15 |                   |               |       |
+| J2        | Epidemiology                  | 15/15    | 15/15 |                   |               |       |
+| J3        | Art                           | 15/15    | 15/15 |                   |               |       |
+| J4        | Cyclic Shifts                 | 15/15    | 15/15 |                   |               |       |
+| J5/S2     | Escape Room                   | 15/15    | 15/15 |                   |               |       |
+| S1        | Surmising a Sprinter’s Speed  | 15/15    | 15/15 |                   |               |       |
+| S3        | Searching for Strings         | 15/15    | 15/15 |                   |               |       |
+| S4        | Swapping Seats                | 15/15    | 15/15 |                   |               |       |
+| S5        | Josh’s Double Bacon Deluxe    |  9/15    |  9/15 |                   |               | TBO   |
 
 **Note:**  
 TBS: To be solved  
