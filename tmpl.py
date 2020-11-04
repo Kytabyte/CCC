@@ -14,3 +14,4 @@ wmat = lambda n, mat, sep: '{}\n{}'.format(n, '\n'.join(sep.join(map(str, row)) 
 warr = lambda n, arr, sep: '{}\n{}'.format(n, sep.join(map(str, arr)))
 wl = lambda *arr: ' '.join(map(str, arr))
 
+
