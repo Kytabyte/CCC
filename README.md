@@ -23,6 +23,8 @@ Thanks in advance.
 
 Test data could be found [here](https://cemc.uwaterloo.ca/contests/past_contests.html).
 
+I put my data into `${year}/data/` folder. My following examples are based on this assumption.
+
 ### DMOJ
 
 [DMOJ](https://dmoj.ca/problems/?search=CCC) has a mirror of CCC grader's test cases on all CCC problems.
