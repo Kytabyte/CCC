@@ -112,8 +112,9 @@ As the instructions in `example.cpp` to obtain the time limit you should set on 
 
 Here listed the grade judged by myself and DMOJ. Since I don't have a CCC online grader account, I am not able to test on that platform. However, it will be much appreciated to help me test my code on CCC online grader platform.
 
-**For Python code** It is clearly stated on the CCC official website that the problem is designed to fail to get full mark on some languages like Python,
-even if the optimal solution is used. However, from my experience it's enough to get top 20% for pure Python submissions.
+**For Python code** It is clearly stated on the CCC official website that the problem is not designed to get full mark on all languages
+even if an optimal solution is used, that is, for a scripting language like Python, it probably fail on some cases with large dataset.
+However, a fairly good standing (not heading to CCO or IOI) can still be achieved with pure Python.
 
 ### 2015
 
