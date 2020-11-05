@@ -6,9 +6,9 @@
 
 using namespace std;
 
-vector<vector<int>> grid;
-vector<vector<bool>> visited;
-unordered_map<int, vector<int>> factors;
+const int MAXN = 1000 + 5, MAXK = 1e6+5;
+int grid[MAXN][MAXN];
+vector<int> factors[MAXK];
 int m, n;
 
 void find_factor(int num) {
@@ -24,49 +24,31 @@ bool dfs(int r, int c) {
     return true;
   }
 
-  int num = grid[r][c];
-  if (!factors.count(num)) {
-    find_factor(num);
-  } else {
+  if (r >= m || c >= n || !factors[grid[r][c]].empty()) {
     return false;
   }
-  // random_shuffle(factors[num].begin(), factors[num].end());
+
+  int num = grid[r][c];
+  find_factor(num);
+
   for (int f : factors[num]) {
     int nr = f - 1, nc = num / f - 1;
-    if (nr < m && nc < n && !visited[nr][nc]) {
-      visited[nr][nc] = true;
-      if (dfs(nr, nc)) {
-        return true;
-      }
-    }
-    
-    swap(nr, nc);
-    if (nr < m && nc < n && !visited[nr][nc]) {
-      visited[nr][nc] = true;
-      if (dfs(nr, nc)) {
-        return true;
-      }
+    if (dfs(nr, nc) || dfs(nc, nr)) {
+      return true;
     }
   }
   return false;
 }
 
-void solve() {
+int main() {
   cin >> m >> n;
-  grid = vector<vector<int>>(m, vector<int>(n, 0));
-  visited = vector<vector<bool>>(m, vector<bool>(n, 0));
   for (int i = 0; i < m; i++) {
     for (int j = 0; j < n; j++) {
       cin >> grid[i][j];
     }
   }
 
-  visited[0][0] = true;
   bool ans = dfs(0, 0);
   cout << (ans ? "yes" : "no") << endl;
-}
-
-int main() {
-  solve();
   return 0;
 }

@@ -6,74 +6,63 @@ using namespace std;
  * Marks: 15/15
  */
 
-int N;
-string S;
-char seats[3] = {'A', 'B', 'C'};
-vector<int> presum[3];
+const int MAXN = 1e6+5;
+int ps[3][MAXN];
+string s;
+int N, ans = MAXN;
 
-int solve() {
-  int Na = presum[0].back(), Nb = presum[1].back();
-  int Nab = Na + Nb;
+bool avail[3];
+int cand[3];
 
-  int ans = 1e9;
-  for (int i = 0; i <= N - Nab; i++) {
-    int na = presum[0][i + Nab] - presum[0][i];
-    int nb = presum[1][i + Nab] - presum[1][i];
-    int nc = presum[2][i + Nab] - presum[2][i];
-
-    int da = Na - na, db = Nb - nb;
-
-    int fa = presum[0][i + Na] - presum[0][i];
-    int fca = presum[2][i + Na] - presum[2][i];
-    int fb = presum[1][i + Nb] - presum[1][i];
-    int fcb =  presum[2][i + Nb] - presum[2][i];
-
-    int cur = nc + min(Na - (fa + min(da, fca)), Nb - (fb + min(db, fcb)));
-
-    ans = min(ans, cur);
-  }
-
-  return ans;
+int query(int i, int s, int l) {
+  return ps[i][s+l] - ps[i][s];
 }
 
-void doswap(int i, int j) {
-  for (int k = 0; k < N; k++) {
-    if (S[k] == seats[i]) {
-      S[k] = seats[j];
-    } else if (S[k] == seats[j]) {
-      S[k] = seats[i];
+void solve(int a, int b, int c) {
+  int Na = ps[a][N], Nb = ps[b][N];
+  int Nab = Na + Nb;
+
+  for (int i = 0; i <= N - Nab; i++) {
+    int na = query(a, i, Nab), nb = query(b, i, Nab), nc = query(c, i, Nab);
+    int da = Na-na, db = Nb-nb;
+
+    int fa = query(a, i, Na), fca = query(c, i, Na);
+    int fb = query(b, i, Nb), fcb = query(c, i, Nb);
+
+    int cur = nc + min(Na - (fa + min(da, fca)), Nb - (fb + min(db, fcb)));
+    ans = min(ans, cur);
+  }
+}
+
+void dfs(int cur) {
+  if (cur == 3) {
+    solve(cand[0], cand[1], cand[2]);
+  }
+
+  for (int i = 0; i < 3; i++) {
+    if (avail[i]) {
+      avail[i] = false;
+      cand[cur] = i;
+      dfs(cur+1);
+      avail[i] = true;
     }
   }
-  swap(seats[i], seats[j]);
-  swap(presum[i], presum[j]);
 }
 
 int main() {
-  cin >> S;
-  N = S.size();
+  cin >> s;
+  N = s.size();
 
   for (int i = 0; i < 3; i++) {
-    presum[i] = vector<int>(N+1, 0);
-  }
-
-  for (int i = 0; i < N; i++) {
-    for (int j = 0; j < 3; j++) {
-      presum[j][i+1] = presum[j][i] + (S[i] - 'A' == j);
+    ps[i][0] = 0;
+    for (int j = 1; j <= N; j++) {
+      ps[i][j] = ps[i][j-1] + (s[j-1] - 'A' == i);
     }
   }
 
-  int ans = 1e9;
-  ans = min(ans, solve()); // ABC
-  doswap(1, 2);
-  ans = min(ans, solve()); // ACB
-  doswap(0, 1);
-  ans = min(ans, solve()); // CAB
-  doswap(1, 2);
-  ans = min(ans, solve()); // CBA
-  doswap(0, 1);
-  ans = min(ans, solve()); // BCA
-  doswap(1, 2);
-  ans = min(ans, solve()); // BAC
+  memset(avail, 1, sizeof(avail));
+
+  dfs(0);
   cout << ans << endl;
 
   return 0;
