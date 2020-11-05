@@ -3,51 +3,40 @@
 using namespace std;
 
 /**
- * Marks: 9/15
- * 
- * O(N^2) is not optimized enough to get full marks
- * To get full marks I guess this could be solved with a closed form of math equation
+ * Marks: 15/15
  */
 
+const int MAXN = 1e6+5, MAXM = 5e5+5;
+int N, bur[MAXN], last[MAXM];
+double pr[MAXM];
+
 int main() {
-  int N;
-  unordered_map<int, int> last, count;
-  unordered_map<int, double> probs;
-  vector<int> B;
-  
   cin >> N;
-  B = vector<int>(N, 0);
   for (int i = 0; i < N; i++) {
-    cin >> B[i];
-    last[B[i]] = i;
+    cin >> bur[i];
+    last[bur[i]] = i;
   }
 
-  int n = B.size(), coach = B[0], josh = B.back();
-  int m = last.size();
-  if (coach == josh) {
+  memset(pr, 0, sizeof(pr));
+
+  int c = bur[0], j = bur[N-1];
+  if (c == j) {
     cout << 1 << endl;
-  } else {
-    probs[coach] = 1;
-    probs[josh] = 0;
-    count[coach] = 1;
-    for (int i = n-1; i >= 1; i--) {
-      if (B[i] != coach && B[i] != josh && last[B[i]] == i) {
-        double prob = 0;
-        for (auto& p : count) {
-          prob += p.second * 1.0 / (n - i) * probs[p.first];
-        }
-        probs[B[i]] = prob;
-      }
-      count[B[i]]++;
-    }
-
-    double ans = 0;
-    for (auto& p : probs) {
-      ans += p.second * count[p.first] / n;
-    }
-
-    cout << fixed << setprecision(9) << ans << endl;
+    return 0;
   }
+
+  pr[c] = 1.0;
+  double total = 1.0;
+  for (int i = N-1; i >= 1; i--) {
+    int b = bur[i];
+    if (last[b] == i && b != c && b != j) {
+      pr[b] = total / (N-i);
+    }
+    total += pr[b];
+  }
+
+  double ans = total / N;
+  cout << fixed << ans << endl;
 
   return 0;
 }
