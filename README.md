@@ -170,7 +170,7 @@ However, a fairly good standing (not heading to CCO or IOI) can still be achieve
 | J5        | Choose your own path      | 15/15    | 15/15 |                   |               |       |
 | S1        | Voronoi Villages          | 15/15    | 15/15 |                   |               |       |
 | S3        | RoboThieves               | 15/15    | 15/15 |                   |               |       |
-| S4        | Balanced Trees            |  5/15    |  5/15 |                   |               |  TBO  |
+| S4        | Balanced Trees            | 15/15    | 15/15 |                   |               |       |
 | S5        | Maximum Strategic Savings | 15/15    | 15/15 |                   |               |       |
 
 ### 2019
@@ -199,7 +199,7 @@ However, a fairly good standing (not heading to CCO or IOI) can still be achieve
 | S1        | Surmising a Sprinter’s Speed  | 15/15    | 15/15 |  15/15            | 15/15         |       |
 | S3        | Searching for Strings         | 15/15    | 15/15 |  15/15            | 15/15         |       |
 | S4        | Swapping Seats                | 15/15    | 15/15 |  8/15             | 8/15          |       |
-| S5        | Josh’s Double Bacon Deluxe    | 15/15    | 15/15 |  15/15            | 15/15         |  Optimized     |
+| S5        | Josh’s Double Bacon Deluxe    | 15/15    | 15/15 |  15/15            | 15/15         |       |
 
 **Note:**  
 TBS: To be solved  

@@ -3,27 +3,35 @@
 using namespace std;
 
 /**
- *  To be optimized.
- * 
- *  Marks: 5/15
+ *  Marks: 15/15
  */
 
 typedef long long ll;
-const int MAX_N = 1e8+5;
-ll dp[MAX_N];
+unordered_map<int, ll> memo;
+
+ll solve(int n) {
+  if (memo.count(n)) {
+    return memo[n];
+  }
+
+  if (n == 1) {
+    return memo[n] = 1;
+  }
+
+  ll ans = 0;
+  for (int k = n, m, j; k > 1; k = j) {
+    m = n / k, j = n / (m+1);
+    ans += solve(m) * (k - j); // (k - j) subtrees with weight m 
+  }
+  return memo[n] = ans;
+}
 
 int main() {
   int N;
   cin >> N;
 
-  dp[1] = 1;
-  for (int i = 2; i <= N; i++) {
-    dp[i] = 0;
-    for (int j = i; j > 1; j--) {
-      dp[i] += dp[i / j];
-    }
-  }
-  cout << dp[N] << endl;
+  ll ans = solve(N);
+  cout << ans << endl;
 
   return 0;
 }
