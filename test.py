@@ -26,7 +26,7 @@ ERROR_OUT = 'e.out'
 CPP_COMPILE_CMD = ['g++', '-O2', '-static', '-o', COMPILE_OUT, '']
 RUN_CMD = {
     'cpp': ['/usr/bin/time', '--verbose', './' + COMPILE_OUT],
-    'py': ['/usr/bin/time', '--verbose', 'python3', '']
+    'py': ['/usr/bin/time', '--verbose', 'python3', '', '<', '']
 }
 COMPARE_CMD = ['diff', '-Z', RUN_OUT, '']
 SCRIPT_TEST_CMD = ['python3', '', '', RUN_OUT, '']
@@ -130,7 +130,8 @@ def find_test_cases(folder):
 
 def compile(src):
     if src.endswith('.py'):
-        return
+        RUN_CMD['py'][-3] = src
+        return True, []
     
     CPP_COMPILE_CMD[-1] = src
     proc = sp.Popen(CPP_COMPILE_CMD, stderr=sp.PIPE)
@@ -157,6 +158,8 @@ def run(case_group, lang, limit):
             stats = {}
             with open(case.fin, 'r') as fin, open(RUN_OUT, 'w') as fout, open(ERROR_OUT, 'w') as ferr:
                 try:
+                    if lang == 'py':
+                        cmd[-1] = case.fin
                     proc = sp.run(cmd, stdin=fin, stdout=fout, stderr=ferr, timeout=limit+1)
                 except sp.TimeoutExpired:
                     stats['time'] = limit+1
@@ -176,6 +179,8 @@ def run(case_group, lang, limit):
 
             if proc.returncode != 0:
                 if proc.stderr:
+                    print(proc.stderr.decode('utf-8'))
+                if proc.stdout:
                     print(proc.stderr.decode('utf-8'))
                 case.rtype = TEST_RESULT_TYPE['runtime_error']
             elif stats['time'] > limit:
