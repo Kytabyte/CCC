@@ -110,6 +110,9 @@ As the instructions in `example.cpp` to obtain the time limit you should set on 
 
 Here listed the grade judged by myself and DMOJ. Since I don't have a CCC online grader account, I am not able to test on that platform. However, it will be much appreciated to help me test my code on CCC online grader platform.
 
+**For Python code** It is clearly stated on the CCC official website that the problem is designed to fail to get full mark on some languages like Python,
+even if the optimal solution is used. However, from my experience it's enough to get top 20% for pure Python submissions.
+
 ### 2015
 
 | Problem # | Title                     | My Judge | DMOJ  | My Judge (Python) | DMOJ (Python) | Notes |
@@ -185,15 +188,15 @@ Here listed the grade judged by myself and DMOJ. Since I don't have a CCC online
 
 | Problem # | Title                         | My Judge | DMOJ  | My Judge (Python) | DMOJ (Python) | Notes |
 | --------- | ----------------------------- | -------- | ----- | ----------------- | ------------- | ----- |
-| J1        | Dog Treats                    | 15/15    | 15/15 |                   |               |       |
-| J2        | Epidemiology                  | 15/15    | 15/15 |                   |               |       |
-| J3        | Art                           | 15/15    | 15/15 |                   |               |       |
-| J4        | Cyclic Shifts                 | 15/15    | 15/15 |                   |               |       |
-| J5/S2     | Escape Room                   | 15/15    | 15/15 |                   |               |       |
-| S1        | Surmising a Sprinter’s Speed  | 15/15    | 15/15 |                   |               |       |
-| S3        | Searching for Strings         | 15/15    | 15/15 |                   |               |       |
-| S4        | Swapping Seats                | 15/15    | 15/15 |                   |               |       |
-| S5        | Josh’s Double Bacon Deluxe    |  9/15    |  9/15 |                   |               | TBO   |
+| J2        | Epidemiology                  | 15/15    | 15/15 |  15/15            | 15/15         |       |
+| J1        | Dog Treats                    | 15/15    | 15/15 |  15/15            | 15/15         |       |
+| J3        | Art                           | 15/15    | 15/15 |  15/15            | 15/15         |       |
+| J4        | Cyclic Shifts                 | 15/15    | 15/15 |  15/15            | 15/15         |       |
+| J5/S2     | Escape Room                   | 15/15    | 15/15 |  13/15            | 13/15         |       |
+| S1        | Surmising a Sprinter’s Speed  | 15/15    | 15/15 |  15/15            | 15/15         |       |
+| S3        | Searching for Strings         | 15/15    | 15/15 |  15/15            | 15/15         |       |
+| S4        | Swapping Seats                | 15/15    | 15/15 |  8/15             | 8/15          |       |
+| S5        | Josh’s Double Bacon Deluxe    | 15/15    | 15/15 |  15/15            | 15/15         |  Optimized     |
 
 **Note:**  
 TBS: To be solved  
