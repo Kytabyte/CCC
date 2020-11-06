@@ -185,7 +185,7 @@ However, a fairly good standing (not heading to CCO or IOI) can still be achieve
 | S2        | Pretty Average Primes         | 15/15    | 15/15 |                   |               |       |
 | S3        | Arithmetic Square             | 15/15    | 16/16 |                   |               |       |
 | S4        | Tourism                       |  -/15    |  -/15 |                   |               | TBS   |
-| S5        | Triangle: The Data Structure  | 15/15    |  4/15 |                   |               | DMOJ has strict time limit      |
+| S5        | Triangle: The Data Structure  | 15/15    | 15/15 |                   |               | See [v2](https://github.com/Kytabyte/CCC/blob/master/2019/src/s5_v2.cpp) for an O(N^2logK) sol to pass DMOJ      |
 
 ### 2020
 
