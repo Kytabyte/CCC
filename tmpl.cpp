@@ -3,6 +3,8 @@
 using namespace std;
 
 /** START OF TEMPLATE */
+#define read(x) do{while((x=getchar())<'0');for(x-='0';'0'<=(_=getchar());x=(x<<3)+(x<<1)+_-'0');}while(0)
+char _;
 
 #define DEBUG(...) cerr << " [" << #__VA_ARGS__  << ": " << (__VA_ARGS__) << "] "
 template<typename T, typename U> ostream& operator<<(ostream& s, pair<T, U> p) {
