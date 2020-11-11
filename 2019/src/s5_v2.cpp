@@ -16,7 +16,6 @@ int main() {
     cin.tie(NULL);
 
     cin >> N >> K;
-
     for (int i = 0; i < N; i++) {
         for (int j = 0; j <= i; j++) {
             cin >> grid[i][j];
@@ -35,14 +34,8 @@ int main() {
         if (k == K) {
             break;
         }
-        int row = k/2 + 1; // max row to cover all points
-        m = k - row + 1;
-        if (k + m > K) {
-            m = K - k;
-            k = K;
-        } else {
-            k += m;
-        }
+        m = min(k - k/2, K - k);
+        k += m;
     }
 
     ll ans = 0;
