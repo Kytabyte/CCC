@@ -29,7 +29,7 @@ RUN_CMD = {
     'py': ['/usr/bin/time', '--verbose', 'python3', '', '<', '']
 }
 COMPARE_CMD = ['diff', '-Z', RUN_OUT, '']
-SCRIPT_TEST_CMD = ['python3', '', '', RUN_OUT, '']
+TEST_HARNESS_CMD = ['python3', '', '', RUN_OUT, '']
 
 FAIL_SCRIPT = 'Test Failed.\n Error Code: {}\n'
 
@@ -214,10 +214,10 @@ def run(case_group, lang, limit):
 def test(case):
     fout = case.fout
 
-    if args.ans_threshold != -1:
+    if args.tol != -1:
         return _test_num_close(RUN_OUT, fout)
-    elif args.test_file:
-        return _script_test(args.test_file, case.fin, RUN_OUT, fout)
+    elif args.harness:
+        return _test_harness(args.harness, case.fin, RUN_OUT, fout)
     else:
         return _test_diff(fout)
 
@@ -241,18 +241,18 @@ def _test_num_close(ans, sol):
                 return False
             try:
                 la, ls = float(la), float(ls)
-                if abs(la - ls) > args.ans_threshold:
+                if abs(la - ls) > args.tol:
                     return False
             except Exception:
                 return False
     return True
 
 
-def _script_test(test_file, input_file, ans, sol):
-    SCRIPT_TEST_CMD[1] = test_file
-    SCRIPT_TEST_CMD[2] = input_file
-    SCRIPT_TEST_CMD[-1] = sol
-    proc = sp.run(SCRIPT_TEST_CMD, stdout=sp.PIPE, stderr=sp.PIPE)
+def _test_harness(test_file, input_file, ans, sol):
+    TEST_HARNESS_CMD[1] = test_file
+    TEST_HARNESS_CMD[2] = input_file
+    TEST_HARNESS_CMD[-1] = sol
+    proc = sp.run(TEST_HARNESS_CMD, stdout=sp.PIPE, stderr=sp.PIPE)
     if proc.stdout:
         print(proc.stdout.decode('utf-8'))
     if proc.stderr:
@@ -317,21 +317,21 @@ def check(src, test_folder, lang, limit):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--source-file', '-s', type=str, help='source program file', required=True)
-    parser.add_argument('--test-case-folder', '-c', type=str, help='test folder', required=True)
-    parser.add_argument('--language', '-l', type=str, help='language used. Now support cpp and py', required=True)
-    parser.add_argument('--ans-threshold', '-a', type=float, help='Threshold to numeric answers.', required=False, default=-1)
-    parser.add_argument('--test-file', '-t', type=str, help='program to test correctness', required=False)
-    parser.add_argument('--timeout', '-e', type=float, help='timeout limit on each test case.', required=False, default=2)
-    parser.add_argument('--cleanup', '-d', type=str, help='delete compiled file after finishing the testing', required=False, default='')
-    parser.add_argument('--early-stop', '-f', type=str, help='stop current test set when one case if failed', default='')
+    parser.add_argument('--src', '-s', type=str, help='source program file', required=True)
+    parser.add_argument('--data', '-d', type=str, help='test folder', required=True)
+    parser.add_argument('--lang', '-l', type=str, help='language used. Now support cpp and py', required=True)
+    parser.add_argument('--tol', '-t', type=float, help='Threshold to numeric answers.', required=False, default=-1)
+    parser.add_argument('--harness', '-H', type=str, help='program to test correctness', required=False)
+    parser.add_argument('--timeout', '-T', type=float, help='timeout limit on each test case.', required=False, default=2)
+    parser.add_argument('--cleanup', '-c', type=str, help='delete compiled file after finishing the testing', required=False, default='')
+    parser.add_argument('--early-stop', '-e', type=str, help='stop current test set when one case if failed', default='')
 
     args = parser.parse_args()
-    if args.language not in {'cpp', 'py'}:
+    if args.lang not in {'cpp', 'py'}:
         print('Language only support cpp or py now.')
         sys.exit(1)
-    if args.ans_threshold != -1 and args.test_file:
-        print('ans-threshold and test_file cannot be set together.')
+    if args.tol != -1 and args.harness:
+        print('tol and harness cannot be set together.')
         sys.exit(1)
 
-    check(args.source_file, args.test_case_folder, args.language, args.timeout)
+    check(args.src, args.data, args.lang, args.timeout)
