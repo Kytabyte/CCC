@@ -15,9 +15,7 @@ The `test.py` file is the my simple test script for checking the correctness of 
 - Basic Usage: Pass `src`, `data` and `lang` arguments in. E.g.
 
     ```bash
-    python3 test.py --src 2020/src/s4.cpp \
-        --data 2020/data/s4/ \
-        --lang cpp
+    python3 test.py --src 2020/src/s4.cpp --data 2020/data/s4/ --lang cpp
     ```
 
     Supported languages are `cpp` and `py` for now.
@@ -33,19 +31,13 @@ The `test.py` file is the my simple test script for checking the correctness of 
     between solution and answer is less than a threshold, use `--tol` (stands for tolerance) argument. E.g. for 2020 s1, run
 
     ```bash
-    python3 test.py --src 2020/src/s1.cpp \
-        --data 2020/data/s1/ \
-        --lang cpp \
-        --tol 1e-6
+    python3 test.py --src 2020/src/s1.cpp --data 2020/data/s1/ --lang cpp --tol 1e-6
     ```
 
     -- For some questions do not have unique answer, I wrote a simple test harness script for each of them, at `year/test/problem.py`. Use `--harness` argument to specify the test file. E.g. for 2019 s3, run
 
     ```bash
-    python3 test.py --src 2019/src/s3.cpp \
-        --data 2019/data/s3 \
-        --lang cpp \
-        --harness 2019/test/s3.py
+    python3 test.py --src 2019/src/s3.cpp --data 2019/data/s3 --lang cpp --harness 2019/test/s3.py
     ```
 
     -- `--early-stop` to stop running the current test set when one case is failed. Default option is false.

@@ -3,19 +3,10 @@
 This is a collection of my solution of [Canadian Computing Competition (CCC)](https://cemc.uwaterloo.ca/contests/computing.html).
 The solutions are mainly written in C++. Python solutions will be updated gradually.
 
-## Motivation
-
-As starting to solving algorithmatic problem from LeetCode for seeking jobs, I didn't realize one day I would be in the hole of competitive programming deeply.
-After I finished around 800 problems on LC, I feel like my body told me get the problems harder... Then I started to write Kick Start, Codejam, Codeforce, Hacker Cup
-etc. And I luckily won a Codejam's T-shirt first time attending...
-
-Finally, my coding skill was brought into teaching industry. I was asked if I could assist some young programmers on the coding and algorithm skills, and
-definitely I am happy to be in. Now I am gradually clean up my solutions and post them here. Hope they're helpful!
-
 ## Contributing
 
-Contribution on missing problems, optimization, simpifying code, and develop a remarkable different solution are more than welcomed. Just send PR and I will be active.
-Thanks in advance.
+Contribution on missing problems, wrong implementation, optimization, simpifying code, and develop a remarkable different solution are more than welcomed. Just send PR and I will be active.
+Thanks in advance!
 
 ## Testing
 
@@ -110,7 +101,7 @@ However, a fairly good standing (not heading to CCO or IOI) can still be achieve
 | J2        | Time to Decompress            | 15/15    |        |       |
 | J3        | Cold Compress                 | 15/15    |        |       |
 | J4/S1     | Flipper                       | 15/15    |        |       |
-| J5        | Rule of Three                 | 15/15    |        | DMOJ add. data failed |
+| J5        | Rule of Three                 | 15/15    |        | DMOJ additional data TLE (15/30) |
 | S2        | Pretty Average Primes         | 15/15    |        |       |
 | S3        | Arithmetic Square             | 15/15    |        |       |
 | S4        | Tourism                       | 15/15    |        |       |
@@ -129,8 +120,10 @@ However, a fairly good standing (not heading to CCO or IOI) can still be achieve
 | S3        | Searching for Strings         | 15/15    |  15/15 |       |
 | S4        | Swapping Seats                | 15/15    |  8/15  |       |
 | S5        | Josh’s Double Bacon Deluxe    | 15/15    |  15/15 |       |
-**  
-TBS: To be solvoptimized
+
+** Notes:
+TBO: To be optimized  
+TBS: To be solved
 
 ## Competitive Programming Resources
 
