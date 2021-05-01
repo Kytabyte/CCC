@@ -156,6 +156,7 @@ def run(case_group, lang, limit):
                 continue
 
             stats = {}
+            proc = None
             with open(case.fin, 'r') as fin, open(RUN_OUT, 'w') as fout, open(ERROR_OUT, 'w') as ferr:
                 try:
                     if lang == 'py':
@@ -177,7 +178,7 @@ def run(case_group, lang, limit):
             case.time = stats['time']
             case.memory = stats['memory']
 
-            if proc.returncode != 0:
+            if proc is not None and proc.returncode != 0:
                 if proc.stderr:
                     print(proc.stderr.decode('utf-8'))
                 if proc.stdout:
