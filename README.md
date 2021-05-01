@@ -121,6 +121,20 @@ However, a fairly good standing (not heading to CCO or IOI) can still be achieve
 | S4        | Swapping Seats                | 15/15    |  8/15  |       |
 | S5        | Josh’s Double Bacon Deluxe    | 15/15    |  15/15 |       |
 
+### 2021
+
+| Problem # | Title                         | C++      | Python | Notes |
+| --------- | ----------------------------- | -------- | ------ | ----- |
+| J1        | Boiling Water                 | 15/15    |        |       |
+| J2        | Silent Auction                | 15/15    |        |       |
+| J3        | Secret Instructions           | 15/15    |        |       |
+| J4        | Arranging Books               | 15/15    |        |       |
+| J5/S2     | Modern Art                    | 15/15    |        |       |
+| S1        | Crazy Fencing                 | 15/15    |        |       |
+| S3        | Lunch Concert                 | 15/15    |        |       |
+| S4        | Daily Commute                 | 15/15    |        |       |
+| S5        | Math Homework                 | 15/15    |        |       |
+
 ** Notes:
 TBO: To be optimized  
 TBS: To be solved
