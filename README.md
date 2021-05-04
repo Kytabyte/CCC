@@ -3,6 +3,11 @@
 This is a collection of my solution of [Canadian Computing Competition (CCC)](https://cemc.uwaterloo.ca/contests/computing.html).
 The solutions are mainly written in C++. Python solutions will be updated gradually.
 
+## Analysis
+
+From 2021, I am adding a brief analysis for all problems for how to tackle the problem as a comment at the top of each source code file. Moreover, I am trying
+to make the variable name more readable, which will make my solution more understandable. I am gradually refactoring the solutions for previous year.
+
 ## Contributing
 
 Contribution on missing problems, wrong implementation, optimization, simpifying code, and develop a remarkable different solution are more than welcomed. Just send PR and I will be active.
