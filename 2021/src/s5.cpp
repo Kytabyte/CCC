@@ -5,12 +5,13 @@ using namespace std;
 /** Analysis
  * 
  * if we want to satisfy all the gcd conditions,
- * the ith number ans[i] should be the lcm of all conditions including this index
+ * the ith number ans[i] should be the lcm of all conditions that includes index i
  * 
- * Invalid case: Just to find the lcm of each index i, and check if each condition is satisfied.
+ * Invalid case: Just to find the lcm of each index i, and check if all conditions are satisfied.
  * 
- * To find lcm of each index: use a difference array to track all the 16 possbilities at each index i.
- * For each index i, find the lcm_i.
+ * To find lcm of each index: use a difference array for every possible gcd (16 possbilities in total)
+ * After this preprocess, we will know which numbers do we need at a given index
+ * For each index i, just calculate the lcm of all numbers that we need.
  * 
  * To check the gcd of each condition, we need to query the gcd of arbitary range.
  * Segment tree is the best data structure for this task. 
